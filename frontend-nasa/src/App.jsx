@@ -17,11 +17,14 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
           <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Signup />} />
+
             <Route path='/' element={<Dashboard />}>
               <Route path='' element={<LandingPage />} />
               <Route path='loader' element={<Loader />} />
-              <Route path='login' element={<Login />} />
-              <Route path='register' element={<Signup />} />
+              
+              
               <Route path='profile' element={<Profile />} />
               <Route path='mars-rover-photos' element={<MarsRoverPhotos />} />
               <Route path='*' element={<NotFound />} />
