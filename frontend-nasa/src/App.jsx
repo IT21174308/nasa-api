@@ -13,36 +13,24 @@ import Earth from './pages/nasa/Earth'
 function App() {
 
   return (
-    <>
       <BrowserRouter>
         <AuthProvider>
           <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Signup />} />
-          <Route path='*' element={<NotFound />} />
-
-
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Signup />} />
             <Route path='/' element={<Dashboard />}>
               <Route path='' element={<LandingPage />} />
-              <Route path='loader' element={<Loader />} />
-              
-              
-              <Route path='profile' element={<Profile />} />
               <Route path='mars-rover-photos' element={<MarsRoverPhotos />} />
-              <Route path='*' element={<NotFound />} />
             </Route>
             <Route path='/user' element={<Dashboard />}>
               <Route path='' element={<LandingPage />} />
               <Route path='profile' element={<Profile />} />
               <Route path='mars-rover-photos' element={<MarsRoverPhotos />} />
               <Route path='earth' element={<Earth />} />
-              <Route path='*' element={<NotFound />} />
             </Route>
           </Routes>
-
         </AuthProvider>
       </BrowserRouter>
-    </>
   )
 }
 

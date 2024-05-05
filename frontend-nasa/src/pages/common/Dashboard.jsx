@@ -36,7 +36,7 @@ const Dashboard = () => {
     const handleItemClick = (key) => {
         if (key === '1') {
             // Navigate to Profile page
-            navigate('/profile');
+            navigate('/user/profile');
         } else if (key === '2') {
             // logout();
             logout()
